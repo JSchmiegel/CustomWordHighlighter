@@ -8,6 +8,8 @@ Highlight any code words or regex patterns in your workspace by editing `.vscode
 - **Priority control** — lower priority numbers win on overlaps
 - **Theme integration** — inherit colors from your active theme via TextMate scopes
 
+## Example
+![Example Image](assets/Example1.png)
 
 ## Configuration
 

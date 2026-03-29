@@ -1,0 +1,32 @@
+{
+  "wordHighlighter.rules": [
+
+    // Simple word with explicit color
+    { 
+      "word": "ut",
+      "color": "#C77DFF",
+      "bold": true
+    },
+
+    // Inherit color from theme scope (keyword.control)
+    {
+      "word": "await",
+      "scope": "keyword.control"
+    },
+
+    // Regex with capture group styling
+    {
+      "word": "([tT][oO][dD][oO]):?",
+      "isRegex": true,
+      "priority": 10,
+      "groups": [
+        {
+          "color": "#FF6B6B",
+          "bold": true
+        },
+        {}
+      ]
+    },
+
+  ]
+}
