@@ -1,0 +1,60 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <clipPath id="roundclip">
+      <rect width="512" height="512" rx="112"/>
+    </clipPath>
+  </defs>
+
+  <rect width="512" height="512" rx="112" fill="#1a1a2e"/>
+
+  <g clip-path="url(#roundclip)">
+    <line x1="0" y1="128" x2="512" y2="128" stroke="#ffffff" stroke-opacity="0.04" stroke-width="1"/>
+    <line x1="0" y1="192" x2="512" y2="192" stroke="#ffffff" stroke-opacity="0.04" stroke-width="1"/>
+    <line x1="0" y1="256" x2="512" y2="256" stroke="#ffffff" stroke-opacity="0.04" stroke-width="1"/>
+    <line x1="0" y1="320" x2="512" y2="320" stroke="#ffffff" stroke-opacity="0.04" stroke-width="1"/>
+    <line x1="0" y1="384" x2="512" y2="384" stroke="#ffffff" stroke-opacity="0.04" stroke-width="1"/>
+
+    <rect x="72" y="118" width="60" height="16" rx="4" fill="#6c6caa" opacity="0.5"/>
+    <rect x="144" y="118" width="100" height="16" rx="4" fill="#4a4a7a" opacity="0.5"/>
+    <rect x="256" y="118" width="70" height="16" rx="4" fill="#4a4a7a" opacity="0.4"/>
+
+    <rect x="72" y="152" width="44" height="16" rx="4" fill="#6c6caa" opacity="0.5"/>
+    <rect x="128" y="152" width="80" height="16" rx="4" fill="#4a4a7a" opacity="0.4"/>
+    <rect x="220" y="152" width="110" height="16" rx="4" fill="#4a4a7a" opacity="0.35"/>
+    <rect x="342" y="152" width="56" height="16" rx="4" fill="#4a4a7a" opacity="0.35"/>
+
+    <rect x="56" y="205" width="400" height="38" rx="8" fill="#7c3aed" opacity="0.18"/>
+    <rect x="72" y="213" width="64" height="22" rx="5" fill="#7c3aed"/>
+    <text x="104" y="229" font-family="monospace" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">const</text>
+    <rect x="148" y="213" width="120" height="22" rx="5" fill="#0d9488"/>
+    <text x="208" y="229" font-family="monospace" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">wordHighlight</text>
+    <rect x="280" y="213" width="24" height="22" rx="5" fill="#4a4a7a" opacity="0.6"/>
+    <text x="292" y="229" font-family="monospace" font-size="13" fill="#a0a0cc" text-anchor="middle">=</text>
+    <rect x="316" y="213" width="126" height="22" rx="5" fill="#d97706"/>
+    <text x="379" y="229" font-family="monospace" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">"your words"</text>
+
+    <rect x="72" y="262" width="80" height="16" rx="4" fill="#4a4a7a" opacity="0.4"/>
+    <rect x="164" y="262" width="130" height="16" rx="4" fill="#4a4a7a" opacity="0.35"/>
+    <rect x="306" y="262" width="60" height="16" rx="4" fill="#4a4a7a" opacity="0.3"/>
+
+    <rect x="72" y="296" width="50" height="16" rx="4" fill="#6c6caa" opacity="0.4"/>
+    <rect x="134" y="296" width="90" height="16" rx="4" fill="#4a4a7a" opacity="0.35"/>
+    <rect x="236" y="296" width="44" height="16" rx="4" fill="#4a4a7a" opacity="0.3"/>
+
+    <rect x="56" y="322" width="340" height="38" rx="8" fill="#0d9488" opacity="0.12"/>
+    <rect x="72" y="330" width="44" height="22" rx="5" fill="#4a4a7a" opacity="0.5"/>
+    <rect x="128" y="330" width="120" height="22" rx="5" fill="#0d9488"/>
+    <text x="188" y="346" font-family="monospace" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">wordHighlight</text>
+    <rect x="260" y="330" width="70" height="22" rx="5" fill="#4a4a7a" opacity="0.45"/>
+    <rect x="342" y="330" width="40" height="22" rx="5" fill="#4a4a7a" opacity="0.35"/>
+  </g>
+
+  <g transform="translate(318, 340) rotate(-35)">
+    <rect x="0" y="0" width="28" height="88" rx="6" fill="#f59e0b"/>
+    <rect x="0" y="0" width="28" height="26" rx="6" fill="#d97706"/>
+    <polygon points="4,88 24,88 16,110 12,110" fill="#92400e"/>
+    <rect x="6" y="30" width="6" height="40" rx="3" fill="#fcd34d" opacity="0.5"/>
+  </g>
+
+  <rect x="56" y="205" width="400" height="38" rx="8" fill="none" stroke="#7c3aed" stroke-width="1.5" opacity="0.5"/>
+</svg>

@@ -1,23 +1,134 @@
 {
-  "name": "custom-code-highlighter",
-  "displayName": "Custom Code Highlighter",
-  "description": "Highlight custom words/patterns per workspace via settings.json, with optional TextMate scope color inheritance.",
-  "version": "0.0.1",
+  "name": "custom-word-highlighter",
+  "publisher": "jschmiegel",
+  "displayName": "Custom Word Highlighter",
+  "description": "Highlight custom words/patterns with regex support, priority-based overlaps, capture groups, and TextMate scope color inheritance.",
+  "version": "0.1.0",
   "engines": {
     "vscode": "^1.110.0"
   },
   "categories": [
     "Other"
   ],
-  "activationEvents": [],
+  "repository": {
+      "type": "git",
+      "url": "https://github.com/JSchmiegel/CustomWordHighlighter.git"
+  },
+  "license": "GPL-2.0",
+  "icon": "assets/logo512.png",
+  "bugs": {
+      "url": "https://github.com/JSchmiegel/CustomWordHighlighter/issues"
+  },
+  "activationEvents": [
+    "onStartupFinished"
+  ],
   "main": "./out/extension.js",
   "contributes": {
-    "commands": [
-      {
-        "command": "custom-code-highlighter.helloWorld",
-        "title": "Hello World"
+    "configuration": {
+      "title": "Custom Word Highlighter",
+      "properties": {
+        "wordHighlighter.rules": {
+          "type": "array",
+          "scope": "resource",
+          "markdownDescription": "List of highlight rules. Each rule matches a word or regex and applies color/style.",
+          "default": [],
+          "items": {
+            "type": "object",
+            "required": ["word"],
+            "additionalProperties": false,
+            "properties": {
+              "word": {
+                "type": "string",
+                "description": "The word or regex pattern to highlight."
+              },
+              "isRegex": {
+                "type": "boolean",
+                "default": false,
+                "description": "Treat 'word' as a regular expression."
+              },
+              "wholeWord": {
+                "type": "boolean",
+                "default": true,
+                "description": "Only match whole words (ignored when isRegex is true)."
+              },
+              "caseSensitive": {
+                "type": "boolean",
+                "default": false,
+                "description": "Whether the match is case-sensitive."
+              },
+              "scope": {
+                "type": "string",
+                "description": "TextMate scope name for color inheritance (e.g. 'keyword.control'). Explicit color always overrides. Use Developer: Inspect Editor Tokens and Scopes command to find scope names."
+              },
+              "color": {
+                "type": "string",
+                "description": "Foreground color (hex, e.g. '#FF6600'). Overrides scope-inherited color."
+              },
+              "backgroundColor": {
+                "type": "string",
+                "description": "Background color (hex). Leave empty for none."
+              },
+              "bold": {
+                "type": "boolean",
+                "default": false,
+                "description": "Bold text. Overrides scope-inherited fontStyle."
+              },
+              "italic": {
+                "type": "boolean",
+                "default": false,
+                "description": "Italic text. Overrides scope-inherited fontStyle."
+              },
+              "underline": {
+                "type": "boolean",
+                "default": false,
+                "description": "Underline text. Overrides scope-inherited fontStyle."
+              },
+              "border": {
+                "type": "string",
+                "description": "CSS border shorthand, e.g. '1px solid #FF6600'."
+              },
+              "groups": {
+                "type": "array",
+                "description": "For regex rules: individual styles for each capture group. Index 0 = group 1, etc.",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "color": {
+                      "type": "string",
+                      "description": "Foreground color for this group (hex)."
+                    },
+                    "backgroundColor": {
+                      "type": "string",
+                      "description": "Background color for this group (hex)."
+                    },
+                    "bold": {
+                      "type": "boolean",
+                      "default": false
+                    },
+                    "italic": {
+                      "type": "boolean",
+                      "default": false
+                    },
+                    "underline": {
+                      "type": "boolean",
+                      "default": false
+                    },
+                    "border": {
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              "priority": {
+                "type": "number",
+                "default": 0,
+                "description": "Lower priority wins on overlaps. Rules with priority 0 (default) conflict resolution falls back to array order."
+              }
+            }
+          }
+        }
       }
-    ]
+    }
   },
   "scripts": {
     "vscode:prepublish": "npm run compile",

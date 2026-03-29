@@ -1,9 +1,4 @@
 # Change Log
 
-All notable changes to the "custom-code-highlighter" extension will be documented in this file.
-
-Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
-
-## [Unreleased]
-
-- Initial release
+## [0.1.0] - 2026-03-29
+- initial publishing of the extension enabling custom word highlighting so that (LaTeX) code words, unknown to the syntax highlighter, are shown the same way as recognized code words
